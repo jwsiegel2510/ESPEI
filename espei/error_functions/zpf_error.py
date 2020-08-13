@@ -464,6 +464,7 @@ def calculate_zpf_error(dbf, phases, zpf_data, phase_models=None,
     if parameters is None:
         parameters = {}
     phase_dict = {}
+    logging.info("{}".format(parameters))
     for phase in phases:
         phase_dict[phase] = {}
     iter_data = zip(zpf_data, repeat(dbf),
